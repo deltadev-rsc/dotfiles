@@ -1,0 +1,87 @@
+{
+  "positionX": "right",
+  "positionY": "top",
+  "layer": "overlay",
+  "control-center-positionX": "right",
+  "control-center-positionY": "top",
+  "control-center-margin-top": 10,
+  "control-center-margin-right": 10,
+  "control-center-margin-bottom": 10,
+  "control-center-margin-left": 10,
+  "control-center-exclusive-zone": true,
+  "notification-icon-size": 64,
+  "notification-body-image-height": 100,
+  "notification-body-image-width": 200,
+  "timeout": 30,
+  "timeout-critical": 0,
+  "keyboard-shortcuts": true,
+  "image-visibility": "when-available",
+  "transition-time": 200,
+  "hide-on-clear": true,
+  "hide-on-action": true,
+  "script-fail-notify": true,
+  "scripts": {},
+  "widget-config": {
+    "title": {
+      "text": "Notifications",
+      "clear-all-button": true,
+      "button-text": "Clear All"
+    },
+    "dnd": {
+      "text": "Do Not Disturb"
+    },
+    "label": {
+      "max-lines": 1,
+      "text": "Control Center"
+    },
+    "mpris": {
+      "blacklist": ["playerctld"],
+      "autohide": false,
+      "show-album-art": "always"
+    },
+    "volume": {
+      "label": "Volume",
+      "show-per-app": true,
+      "expand-per-app": false
+    },
+    "backlight": {
+      "label": "Brightness",
+      "device": "intel_backlight",
+      "subsystem": "backlight"
+    },
+    "buttons-grid": {
+      "buttons-per-row": 4,
+      "actions": [
+        {
+          "label": "WiFi",
+          "type": "toggle",
+          "active": true,
+          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && nmcli radio wifi on || nmcli radio wifi off'",
+          "update-command": "sh -c '[[ $(nmcli radio wifi) == \"enabled\" ]] && echo true || echo false'"
+        },
+        {
+          "label": "Bluetooth",
+          "type": "toggle",
+          "active": true,
+          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && bluetoothctl power on || bluetoothctl power off'",
+          "update-command": "sh -c '[[ $(bluetoothctl show | grep Powered) == \"Powered: yes\" ]] && echo true || echo false'"
+        },
+        {
+          "label": "Airplane Mode",
+          "type": "toggle",
+          "active": false,
+          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && nmcli radio all on || nmcli radio all off'",
+          "update-command": "sh -c '[[ $(nmcli radio all) == \"enabled\" ]] && echo false || echo true'"
+        },
+        {
+          "label": "Do Not Disturb",
+          "type": "toggle",
+          "active": false,
+          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && swaync-client -d || swaync-client -D'",
+          "update-command": "swaync-client -swb | grep -q dnd && echo true || echo false"
+        }
+      ]
+    }
+  }
+}
+
