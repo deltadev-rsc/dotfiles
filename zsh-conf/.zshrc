@@ -97,12 +97,6 @@ fi
 # Compilation flags
 export ARCHFLAGS="-arch $(uname -m)"
 
-# functions
-function dltsh() { cd ~/open-delta/kernel/shell/ && make && make run }
-function screenfetch() { cd ~/screenFetch/ && ./screenfetch-dev && cd ~/ }
-function yc() { yazi ~/.config }
-function lg() { z op && lazygit }
-
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
 # users are encouraged to define aliases within a top-level file in
