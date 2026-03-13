@@ -1,0 +1,231 @@
+exec swaync --config ~/.config/swaync/config.jsonc --style ~/.config/swaync/style.css
+
+set $mod Mod4
+set $left h
+set $down j
+set $up k
+set $right l
+set $term alacritty 
+set $menu wofi --show drun
+set $filemanager dolphin
+set $screenshot hyprshot -h
+
+set $ws1 " "
+set $ws2 "󰈹 "
+set $ws3 " "
+set $ws4 " "
+set $ws5 "󱧶 "
+set $ws6 "󰠮 "
+
+set $rosewater #f5e0dc
+set $flamingo #f2cdcd
+set $pink #f5c2e7
+set $mauve #cba6f7
+set $red #f38ba8
+set $maroon #eba0ac
+set $peach #fab387
+set $yellow #f9e2af
+set $green #a6e3a1
+set $teal #94e2d5
+set $sky #89dceb
+set $sapphire #74c7ec
+set $blue #89b4fa
+set $lavender #b4befe
+set $text #cdd6f4
+set $subtext1 #bac2de
+set $subtext0 #a6adc8
+set $overlay2 #9399b2
+set $overlay1 #7f849c
+set $overlay0 #6c7086
+set $surface2 #585b70
+set $surface1 #45475a
+set $surface0 #313244
+set $base #1e1e2e
+set $mantle #181825
+set $crust #11111b 
+
+exec swaybg -i ~/walls/catppuccin-wall-1.png -m fill -o eDP-1
+exec nm-applet
+exec_always --no-startup-id pipewire
+exec_always --no-startup-id pipewire-pulse
+
+workspace $ws1
+workspace $ws2
+workspace $ws3
+workspace $ws4
+workspace $ws5
+workspace $ws6
+
+workspace $ws1
+
+gaps inner 3
+gaps outer 3 
+
+default_border pixel 2.7
+default_floating_border pixel 2.7
+
+blur enable
+# blur_xray enable
+blur_radius 1
+blur_passes 3
+blur_noise 0
+blur_brightness 1
+
+shadows enable
+shadow_blur_radius 1
+
+corner_radius 2
+layer_effects "waybar" {
+    blur enable;
+    blur_xray enable;
+    blur_ignore_transparent enable;
+    shadows enable;
+    corner_radius 5;
+}
+
+# gruvbox
+# client.focused #d65d0e #d65d0e #d65d0e #d65d0e
+
+# everforest
+# client.focused #a7c080 #a7c080 #a7c080 #a7c080
+
+# nordic
+# client.focused #bbc3d4 #d8dee9 #d8dee9 #d8dee9
+
+# catppucin mocha lavender
+client.focused           $lavender $base $text  $lavender $lavender
+client.focused_inactive  $overlay0 $base $text  $overlay0 $overlay0
+client.unfocused         $overlay0 $base $text  $rosewater $overlay0
+client.urgent            $peach    $base $peach $overlay0  $peach
+client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
+client.background        $base
+
+# ayu mirage
+# client.focused #facc6e #facc6e #facc6e #facc6e
+
+# kanagawa wave
+# client.focused #7aa89fee #7aa89fee #7aa89fee #7aa89fee
+
+bindsym $mod+q exec $term
+bindsym $mod+c kill
+bindsym $mod+r exec $menu
+bindsym $mod+Print exec $screenshot
+bindsym $mod+o exec $filemanager
+bindsym $mod+p exec swaylock --config ~/.config/swaylock/swaylock.conf
+
+floating_modifier $mod normal
+
+bindsym $mod+Shift+c reload
+
+bindsym $mod+m exec swaymsg exit
+bindsym $mod+u exec swaymsg reload
+
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace number 7
+bindsym $mod+8 workspace number 8
+bindsym $mod+9 workspace number 9
+bindsym $mod+0 workspace number 10
+
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8
+bindsym $mod+Shift+9 move container to workspace number 9
+bindsym $mod+Shift+0 move container to workspace number 10
+bindsym $mod+b splith
+bindsym $mod+v splitv
+
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+bindsym $mod+g fullscreen
+
+bindsym $mod+Alt+v floating toggle
+
+bindsym $mod+space focus mode_toggle
+
+bindsym $mod+a focus parent
+bindsym $mod+Shift+minus move scratchpad
+
+bindsym $mod+minus scratchpad show
+
+input * {
+    xkb_layout "us,ru"
+    xkb_options "grp:alt_shift_toggle"
+}
+
+mode "resize" {
+    bindsym $left resize shrink width 10px
+    bindsym $down resize grow height 10px
+    bindsym $up resize shrink height 10px
+    bindsym $right resize grow width 10px
+
+    bindsym Left resize shrink width 10px
+    bindsym Down resize grow height 10px
+    bindsym Up resize shrink height 10px
+    bindsym Right resize grow width 10px
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+d mode "resize"
+
+bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
+bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
+bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
+bindsym --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ toggle
+
+bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
+
+bindsym Print exec grim
+bindsym $mod+Shift+Print exec ~/scripts/screen.sh 
+
+bar {
+    height 25
+    position top
+    swaybar_command waybar
+    colors {
+        background #11111b
+        statusline #cdd6f4
+        focused_statusline #cdd6f4
+        focused_separator #1e1e2e
+
+        focused_workspace   #1e1e2e  #cba6f7  #11111b
+        active_workspace    #1e1e2e  #585b70  #cdd6f4
+        inactive_workspace  #1e1e2e  #1e1e2e  #cdd6f4
+        urgent_workspace    #1e1e2e  #f38ba8  #11111b
+    }
+}
+
+include /etc/sway/config.d/*
