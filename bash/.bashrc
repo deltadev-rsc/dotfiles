@@ -14,4 +14,10 @@ parse_git_branch() {
 PS1="$COLOR_USER\u@\h$COLOR_DEF:$COLOR_PATH\w$COLOR_GIT\$(parse_git_branch)$COLOR_DEF$COLOR_DOLLAR\$ $COLOR_DEF"
 
 alias ls='exa --icons --color=always --group-directories-first'
+alias v='vim'
+alias nv='nvim'
+alias dv='doas vim'
+alias dnv='doas nvim'
+alias ff='fastfetch'
+alias lgit='lazygit'
 . "$HOME/.cargo/env"
