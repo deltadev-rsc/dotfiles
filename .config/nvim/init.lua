@@ -1,6 +1,7 @@
 -- автозапуск lsp для clangd и rust-analyzer
 vim.cmd("lua vim.lsp.enable('clangd')")
 vim.cmd("lua vim.lsp.enable('rust_analyzer')")
+vim.cmd("lua vim.lsp.enable('bash-language-server')")
 
 -- настройка и писок плагинов для установки
 require('core.plugins')
@@ -15,6 +16,7 @@ require('plugins.mason')
 require('plugins.lualine')
 require('plugins.bufferline')
 require('plugins.dashboard')
+--require('plugins.dashboard-doom')
 require('plugins.dapui')
 require('plugins.themery')
 require('plugins.icons')
