@@ -1,6 +1,6 @@
 {
-    "layer": "top", // "bottom",
-    "position": "top", //"bottom",
+    "layer": "top",
+    "position": "top",
     "output": ["eDP-1", "HDMI-A-1"],
     "spacing": 0,
     "height": 25,
@@ -11,7 +11,7 @@
         "custom/logo",
         "sway/mode",
         "sway/workspaces",
-        "persistent_workspaces",
+        "persistent_workspaces"
     ],
     "modules-center": [
         "clock"
@@ -121,7 +121,7 @@
         "width": 5,
         "icon": true,
         "on-click": "whoami"
-    },   
+    },
 
     "tray": {
         "spacing": 11
