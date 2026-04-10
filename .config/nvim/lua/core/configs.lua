@@ -135,6 +135,7 @@ require('nordic').setup({
             highlight.italic = false
         end 
     end,
+    background = '222630',
     bold_keywords = false,
     italic_comments = true,
     transparent = {
@@ -159,7 +160,7 @@ require('nordic').setup({
     noice = {
         -- Available styles: `classic`, `flat`.
         style = 'flat',
-        background = "#2E344O"
+        background = "#1e222a"
     }, 
     telescope = {
         style = 'flat',
@@ -193,9 +194,9 @@ require("everforest").setup({
 
 require("gruvbox").setup({
   terminal_colors = true, 
-  undercurl = true,
+  undercurl = false,
   underline = true,
-  bold = true,
+  bold = false,
   italic = {
     strings = true,
     emphasis = true,
@@ -207,14 +208,13 @@ require("gruvbox").setup({
   invert_selection = false,
   invert_signs = false,
   invert_tabline = false,
-  inverse = true, 
-  contrast = "hard", 
+  inverse = false, 
+  contrast = "medium", 
   palette_overrides = {},
   overrides = {},
   dim_inactive = false,
   transparent_mode = false,
 })
-
 require('kanagawa').setup({
     compile = false,             -- enable compiling the colorscheme
     undercurl = true,            -- enable undercurls
@@ -245,5 +245,4 @@ vim.cmd.colorscheme "catppuccin"
 vim.cmd([[colorscheme gruvbox]])
 vim.cmd([[colorscheme everforest]])
 vim.cmd([[colorscheme nordic]])
-vim.cmd([[colorscheme ayu-mirage]])
 vim.o.background = "dark"
