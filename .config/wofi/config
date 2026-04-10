@@ -1,7 +1,7 @@
 width=450
 height=350
-margin=24
-border_radius=10
+margin=100
+border_radius=11
 term=alacritty
 insensitive=true
 location=ceneter
@@ -12,8 +12,8 @@ dynamic_lines=false
 exec_search=true
 parse_actions=true
 sort_order=default
-offset_x=0
-offset_y=0
+offset_x=1
+offset_y=1
 
 blur=0.85
 opacity=0.90
@@ -35,9 +35,9 @@ always_parse_args=true
 print_command=true
 gtk_dark=true
 
-horizontal_padding=24
-vertical_padding=16
-line_spacing=4
+horizontal_padding=25
+vertical_padding=17
+line_spacing=5
 
 hide_on_focus_lost=true
 allow_markup=true
