@@ -7,7 +7,7 @@ require('lualine').setup {
     icons_enabled = true,
     theme = 'auto', -- 'catppuccin',
     component_separators = '', -- { left = '', right = ''},
-    section_separators = { left = '', right = ''}, -- { left = '', right = '' },
+    section_separators =  { left = '', right = '' }, -- { left = '', right = ''}, or {left = '', right = '' }, 
     disabled_filetypes = {
       statusline = {},
       winbar = {},
