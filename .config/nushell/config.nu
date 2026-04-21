@@ -16,17 +16,7 @@
 # You can also pretty-print and page through the documentation for configuration
 # options using:
 #     config nu --doc | nu-highlight | less -R
+
 source ~/.config/nushell/catppuccin_mocha.nu
-
-def disks () {
-    sys disks | sort-by free | reverse | first (1 + 2) | update device /dev/sda
-}
-
-# aliases
-alias ff = fastfetch
-alias nf = neofetch
-alias nv = nvim
-alias dnv = doas nvim
-alias v = vim
-alias dv = doas vim
-alias cat = bat --theme=Catppuccin\ Mocha
+source ~/.config/nushell/func.nu
+source ~/.config/nushell/aliases.nu
