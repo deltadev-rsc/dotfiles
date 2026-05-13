@@ -1,6 +1,6 @@
 # прикольно, но для катпучина
 # alias ls="exa --tree --level=1 --icons --color=always --no-time --no-user --no-permissions"
-alias ls="exa --icons --color=always --group-directories-first --no-time --no-user --no-permissions"
+alias ls="exa --icons --color=always --group-directories-first"
 alias cat="bat --theme-dark=base16-256"
 alias sudo="doas"
 alias ff="fastfetch"
