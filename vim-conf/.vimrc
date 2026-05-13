@@ -1,8 +1,8 @@
 import "~/.vim/plugins.vim"
 import "~/.vim/mappings.vim"
 
-autocmd VimEnter * :colorscheme catppuccin
-autocmd VimEnter * :AirlineTheme catppuccin_mocha
+autocmd VimEnter * :colorscheme tokyonight
+autocmd VimEnter * :AirlineTheme tokyonight
 
 set number
 set relativenumber
