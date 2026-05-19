@@ -1,7 +1,8 @@
-exec swaybg -i ~/walls/tokyonigt/tokyonight-wall-3.png -m fill -o eDP-1
+exec swaybg -i ~/walls/catppuccin/catppuccin-wall-3.jpg -m fill -o eDP-1
 exec nm-applet
 exec_always --no-startup-id pipewire
 exec_always --no-startup-id pipewire-pulse
+exec_always wireplumber
 
 bar {
     font JetBrainsMono Nerd Font 11
