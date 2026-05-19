@@ -4,14 +4,11 @@
     "output": ["eDP-1", "HDMI-A-1"],
     "spacing": 0,
     "height": 25,
-    /* "margin-top": 3,
-    "margin-left": 6,
-    "margin-right": 6,
-    "margin-bottom": 3, */
     "modules-left": [
         "custom/logo",
-        "sway/mode",
+       	"hyprland/workspaces",
         "sway/workspaces",
+        "sway/mode",
         "persistent_workspaces"
     ],
     "modules-center": [
@@ -171,7 +168,7 @@
     },
 
     "custom/logo": {
-        "format": "   void",
+        "format": " artix",
         "tooltip": false,
         "on-click": "wofi --show drun"
     },
