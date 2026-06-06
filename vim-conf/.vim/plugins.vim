@@ -26,14 +26,14 @@ call plug#end()
 
 " tabline, bottom line
 let g:airline#extensions#tabline#left_sep = ''
-let g:airline#extensions#tabline#left_alt_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = '/'
 let g:airline#extensions#tabline#formatter = 'default'
 let g:airline#extensions#tabline#enabled = 1
 let g:indentLine_char = ''
 let g:airline_first_char = { '' : '' }
 let g:airline_multiline = 0
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
 let g:indentLine_showFirstIndentLevel = 1
 let g:indentLine_setColors = 0
 
@@ -47,11 +47,8 @@ let g:webdevicons_enable_airline_tabline = 1
 let g:webdevicons_enable_airline_statusline = 1
 let g:webdevicons_enable_ctrlp = 1
 let WebDevIconsUnicodeDecorateFolderNodesExactMatches = 1
-let g:DevIconsDefaultFolderOpenSymbol = ''
+let g:DevIconsDefaultFolderOpenSymbol = ' '
 let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols = {} 
-let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.c.*\.i'] = ''
-let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.cpp.*\.ipp'] = ''
-let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.asm.*\.s'] = ''
 
 " THEMES SETTINGS
 " ayu 
