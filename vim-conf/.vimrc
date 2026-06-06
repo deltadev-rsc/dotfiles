@@ -1,8 +1,8 @@
 import "~/.vim/plugins.vim"
 import "~/.vim/mappings.vim"
 
-autocmd VimEnter * :colorscheme tokyonight
-autocmd VimEnter * :AirlineTheme tokyonight
+autocmd VimEnter * :colorscheme catppuccin
+autocmd VimEnter * :AirlineTheme catppuccin_mocha
 
 set number
 set relativenumber
@@ -10,6 +10,7 @@ set autoindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set laststatus=2
 
 set encoding=UTF-8
 set laststatus=2
