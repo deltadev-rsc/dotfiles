@@ -19,6 +19,7 @@ function clone_nvim_distro {
   echo "клонируем DeltaNvim в ~/.config/nvim"
   git clone https://github.com/deltadev-rsc/DeltaNvim/
   cp -r ~/DeltaNvim/src/ ~/.config/nvim/
+  rm -rf ~/.config/nvim/lazy-lock.json
 }
 
 function add_new_conf {
