@@ -1,4 +1,4 @@
-exec swaybg -i ~/walls/tokyonigt/tokyonight-wall-3.png -m fill -o eDP-1
+exec swaybg -i ~/walls/kanagawa/kanagawa-wave-wall-4.png -m fill -o eDP-1
 exec nm-applet
 exec_always --no-startup-id pipewire
 exec_always --no-startup-id pipewire-pulse
