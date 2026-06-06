@@ -1,6 +1,6 @@
 width=450
 height=400
-margin=5
+margin=25
 border_radius=11
 term=ghostty
 insensitive=true
@@ -34,8 +34,8 @@ always_parse_args=true
 print_command=true
 gtk_dark=true
 
-horizontal_padding=5
-vertical_padding=5
+horizontal_padding=3
+vertical_padding=3
 line_spacing=0
 
 hide_on_focus_lost=true
