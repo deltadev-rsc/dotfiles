@@ -24,9 +24,9 @@ deps() {
             sudo xbps-install curl wget
 
             echo "installing fonts"
-            sudo xbps-install nerd-fonts
+            sudo xbps-install nerd-fonts nerd-fonts-symbols-ttf nerd-fonts-ttf
             wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip
-
+            
             echo "installing tool for screenshot"
             sudo xbps-install grim
             sudo xbps-install slurp
@@ -49,6 +49,8 @@ deps() {
             ./install.sh 
             ./tui-installer
             cd ../
+
+            sudo xbps-install -S papirus-icon-theme 
 
             echo "installing zsh-plugins"
             mkdir ~/zsh-plugins/ && cd ~/zsh-plugins
