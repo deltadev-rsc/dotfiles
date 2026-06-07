@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/usr/bin/bash
 
-deps() {
+function deps {
     clear
 
     echo "██████                          ██████                   █████                                      "
@@ -33,12 +33,17 @@ deps() {
 
             echo "installing base utils"
             sudo xbps-install wofi waybar
-            sudo xbps-install vim nvim lua zsh
+            sudo xbps-install vim neovim lua zsh
             sudo xbps-install ibus ibus-anthy ibus-m17n
             sudo xbps-install wireplumber pipewire alsa-utils pavucontrol
             sudo xbps-install network-manager-applet
             sudo xbps-install swaylock SwayNotificationCenter swayfx
-    
+            
+            echo "installing fish shell and tide theme"
+            sudo xbps-install fish-shell 
+            curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+            fisher install IlanCosman/tide
+
             echo "installing utils"
             sudo xbps-install fastfetch htop cava yazi zoxide
             sudo xbps-install exa bat
