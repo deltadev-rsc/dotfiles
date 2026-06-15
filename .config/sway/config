@@ -1,27 +1,27 @@
-exec swaybg -i ~/walls/catp/catppuccin-wall-1.png -m fill -o eDP-1
+exec swaybg -i ~/walls/gruv/gruv-wall-6.png -m fill -o eDP-1
 exec nm-applet
 exec_always --no-startup-id pipewire
 exec_always --no-startup-id pipewire-pulse
 
 bar {
     font JetBrainsMono Nerd Font 11
-    height 25
+    height 30
 
     position top
-    # status_command i3status
+    status_command i3status
     # separator_symbol "|"
     # status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-    swaybar_command waybar
+    # swaybar_command waybar
     colors {
-        background #1e1e2e 
-        statusline #cdd6f4
-        focused_statusline #cdd6f4
-        focused_separator #181825
+        background #141617 
+        statusline #ddc7a1
+        focused_statusline #ddc7a1
+        focused_separator #141617
 
-        focused_workspace   #313244  #b4befe    #1e1e2e
-        active_workspace    #313244  #313244  #cdd6f4
-        inactive_workspace  #313244  #181825  #cdd6f4
-        urgent_workspace    #313244  #fab387  #1e1e2e
+        focused_workspace   #282828  #e7894d  #282828
+        active_workspace    #282828  #3c3836  #ddc7a1
+        inactive_workspace  #282828  #1d2021  #ddc7a1
+        urgent_workspace    #282828  #ea6962  #282828
     }
 }
 
