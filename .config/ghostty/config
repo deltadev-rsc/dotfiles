@@ -1,4 +1,4 @@
-theme = kanagawa-wave.conf
+theme = gruv.conf
 
 font-family = JetBrainsMono Nerd Font
 font-style = Bold
@@ -9,4 +9,4 @@ confirm-close-surface = false
 window-padding-x = 0
 window-padding-y = 0
 
-background-opacity = 0.855
+background-opacity = 0.995
